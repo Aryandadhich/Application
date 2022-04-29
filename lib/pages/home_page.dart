@@ -7,7 +7,6 @@ import 'package:flutter_application_1/widgets/home_widgets/cataloglist.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -55,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                 catalogheader(),
                 if (CatalogModel.items != null &&
                     CatalogModel.items!.isNotEmpty)
-                  Cataloglist().expand()
+                  Cataloglist().py16().expand()
                 else
                   CircularProgressIndicator().centered().expand(),
               ],
