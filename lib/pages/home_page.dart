@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
+import 'package:flutter_application_1/utils/routes.dart';
 import 'package:flutter_application_1/models/catalog.dart';
 import 'package:flutter_application_1/widgets/home_widgets/catalogheader.dart';
 import 'package:flutter_application_1/widgets/home_widgets/cataloglist.dart';
@@ -17,7 +19,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final int days = 30;
 
-  final String name = "Codepur";
+  final String name = "Aryan";
 
   get gridView => null;
 
@@ -45,6 +47,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: MyTheme.creamcolor,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+          backgroundColor: Colors.deepPurple,
+          child: const Icon(CupertinoIcons.cart),
+        ),
         body: SafeArea(
           child: Container(
             padding: Vx.m32,

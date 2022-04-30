@@ -1,8 +1,8 @@
-import 'package:flutter_application_1/models/catalog.dart';
-import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/models/catalog.dart';
+import 'package:flutter_application_1/widgets/themes.dart';
 
 class homedetailpage extends StatelessWidget {
   final Item catalog;
@@ -14,7 +14,7 @@ class homedetailpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(backgroundColor: Colors.transparent),
       backgroundColor: MyTheme.creamcolor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -30,8 +30,8 @@ class homedetailpage extends StatelessWidget {
                     MyTheme.darkbluishcolor,
                   ),
                   shape: MaterialStateProperty.all(StadiumBorder())),
-              child: "Buy".text.make(),
-            ).wh(100, 50)
+              child: "Add to cart".text.make(),
+            ).wh(130, 50)
           ],
         ).p32(),
       ),
@@ -62,6 +62,11 @@ class homedetailpage extends StatelessWidget {
                           .xl
                           .make(),
                       10.heightBox,
+                      "Apple's iPhone 13 features a ceramic shield front, Super Retina XDR display with True Tone and an A15 Bionic chip. The first design change users will notice is the smaller notch. After years of using the same-sized notch to house the Face ID components, Apple has finally reduced its size by 20%."
+                          .text
+                          .textStyle(context.captionStyle!)
+                          .make()
+                          .p16()
                     ],
                   ).py64()),
             ))
