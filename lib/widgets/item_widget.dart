@@ -7,7 +7,6 @@ class ItemWidget extends StatefulWidget {
 
   const ItemWidget({Key? key, required this.item}) : super(key: key);
 
-
   @override
   State<ItemWidget> createState() => _ItemWidgetState();
 }
