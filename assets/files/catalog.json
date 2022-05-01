@@ -62,6 +62,14 @@
             "price": 899,
             "color": "#7c95eb",
             "image": "https://images.samsung.com/is/image/samsung/p6pim/za/galaxy-s21/gallery/za-clear-cover-galaxy-s21-5g-ef-qg991ttegww-363168624?$720_576_PNG$"
+        },
+        {
+            "id": 9,
+            "name": "iphone 13 pro max",
+            "desc": "iphone 13 pro max 2022 edition",
+            "price": 1200,
+            "color": "#7c95eb",
+            "image": "https://o.remove.bg/downloads/316456fd-ae0e-48ca-baaf-33adb3840681/Apple_iPhone-13-Pro_iPhone-13-Pro-Max-removebg-preview.png"
         }
     ]
 }

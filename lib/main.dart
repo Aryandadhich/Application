@@ -11,6 +11,17 @@ void main() {
   runApp(MyApp());
 }
 
+// class pinchtozoom extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Container(
+//         child: pinchtozoom(),
+//       ),
+//     );
+//   }
+// }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
