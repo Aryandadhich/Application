@@ -16,7 +16,10 @@ void main() {
 //   Widget build(BuildContext context) {
 //     return Scaffold(
 //       body: Container(
-//         child: pinchtozoom(),
+//         child: PinchZoomImage(
+//           image: Image.asset("assets/images/hey.png"),
+//           hideStatusBarWhileZooming: true,
+//         ),
 //       ),
 //     );
 //   }
