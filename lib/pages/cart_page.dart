@@ -42,7 +42,8 @@ class _carttotal extends StatelessWidget {
           ElevatedButton(
                   onPressed: () {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: "lavdu okat me reh".text.make(),
+                      content:
+                          "out of stock and also from your okat".text.make(),
                     ));
                   },
                   style: ButtonStyle(
@@ -65,13 +66,19 @@ class _cartlistState extends State<_cartlist> {
   final _cart = Cartmodel();
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: _cart.Items.length,
-        itemBuilder: ((context, index) => ListTile(
-              leading: Icon(Icons.done),
-              trailing: IconButton(
-                  icon: Icon(Icons.remove_circle_outline), onPressed: () {}),
-              title: _cart.Items[index].name.text.make(),
-            )));
+    return _cart.Items.isEmpty
+        ? "Nothing to show".text.xl3.makeCentered()
+        : ListView.builder(
+            itemCount: _cart.Items.length,
+            itemBuilder: ((context, index) => ListTile(
+                  leading: Icon(Icons.done),
+                  trailing: IconButton(
+                      icon: Icon(Icons.remove_circle_outline),
+                      onPressed: () {
+                        _cart.remove(_cart.Items[index]);
+                        setState(() {});
+                      }),
+                  title: _cart.Items[index].name.text.make(),
+                )));
   }
 }
