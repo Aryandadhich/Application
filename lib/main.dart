@@ -1,29 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/store.dart';
 import 'package:flutter_application_1/pages/cart_page.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
 import 'package:flutter_application_1/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'pages/home_page.dart';
 
 import 'widgets/themes.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(VxState(store: MyStore(), child: MyApp()));
 }
-
-// class pinchtozoom extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Container(
-//         child: PinchZoomImage(
-//           image: Image.asset("assets/images/hey.png"),
-//           hideStatusBarWhileZooming: true,
-//         ),
-//       ),
-//     );
-//   }
-// }
 
 class MyApp extends StatelessWidget {
   @override
