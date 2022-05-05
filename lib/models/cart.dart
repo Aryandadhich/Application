@@ -13,8 +13,6 @@ class Cartmodel {
   //get catalog
   CatalogModel get catalog => _catalog;
 
-  get itemids => null;
-
   set catalog(CatalogModel newCatalog) {
     assert(newCatalog != null);
     _catalog = newCatalog;
@@ -27,13 +25,6 @@ class Cartmodel {
   num get totalprice =>
       Items.fold(0, (total, current) => total + current.price);
 
-  //add item
-
-  void add(Item item) {
-    _itemIds.add(item.id);
-  }
-
-  //remove item
   void remove(Item item) {
     _itemIds.remove(item.id);
   }
@@ -46,5 +37,15 @@ class AddMutation extends VxMutation<MyStore> {
   @override
   perform() {
     store?.cart._itemIds.add(item.id);
+  }
+}
+
+class RemoveMutation extends VxMutation<MyStore> {
+  final Item item;
+
+  RemoveMutation(this.item);
+  @override
+  perform() {
+    store?.cart._itemIds.remove(item.id);
   }
 }
